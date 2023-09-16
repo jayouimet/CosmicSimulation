@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# VS Workspace
+.vscode
+
+# Mac hidden finder file
+.DS_Store
