@@ -36,5 +36,5 @@ int main()
 
     std::cout << p.toString() << std::endl;
 
-    return 1;
+    return 0;
 }

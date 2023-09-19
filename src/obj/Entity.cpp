@@ -1,5 +1,7 @@
 #include "Entity.h"
 
+int Entity::__id_counter = 0;
+
 Entity::Entity()
 {
     this->__id = Entity::__id_counter++;

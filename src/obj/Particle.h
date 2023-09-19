@@ -18,6 +18,7 @@ private:
     float mDensity;
 public:
     Particle();
+    ~Particle();
 
     float getMass();
     void setMass(float);

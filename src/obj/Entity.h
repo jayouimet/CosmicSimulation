@@ -14,7 +14,7 @@ protected:
     F4DEngine::F4DVector3 mDirection;
 public:
     Entity();
-    virtual ~Entity();
+    virtual ~Entity() {};
 
     int getId();
 
@@ -25,7 +25,5 @@ public:
     F4DEngine::F4DVector3 getDirection();
     void setDirection(F4DEngine::F4DVector3);
 };
-
-int Entity::__id_counter = 0;
 
 #endif

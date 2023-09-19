@@ -2,6 +2,8 @@
 
 F4DEngine::F4DVector3 Simulator::getGravityPull(Particle& particle)
 {
+    F4DEngine::F4DVector3 resVec = F4DEngine::F4DVector3();
+
     std::vector<Entity> *entities = this->mUniverse.getEntitiesPtr();
 
     for (int i = 0; i < entities->size(); i++) 
@@ -18,7 +20,11 @@ F4DEngine::F4DVector3 Simulator::getGravityPull(Particle& particle)
 
                 float f = GRAVITY_CONSTANT * (p->getMass() * particle.getMass())/(dst * dst * dst);
                 F4DEngine::F4DVector3 unitDstVec = dstVec.getNormalizedVector();
+
+                resVec += unitDstVec * f;
             }
         }
     }
+
+    return resVec;
 }

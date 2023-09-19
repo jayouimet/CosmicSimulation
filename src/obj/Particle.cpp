@@ -7,6 +7,11 @@ Particle::Particle()
     this->mDensity = 5510;
 }
 
+Particle::~Particle() 
+{
+
+}
+
 float Particle::getMass() 
 {
     return this->mMass;
