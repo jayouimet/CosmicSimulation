@@ -46,6 +46,7 @@ namespace F4DEngine {
 #pragma region Methods
       float magnitude() const;
       void normalize();
+      F4DVector3 getNormalizedVector();
       F4DVector3 rotateVectorAboutAngleAndAxis(float uAngle, F4DVector3& uAxis);
       std::string toString();
 #pragma endregion

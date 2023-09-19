@@ -1,8 +1,10 @@
 #ifndef MATH_F4DQUATERNION_H_
 #define MATH_F4DQUATERNION_H_
 
-
+#ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
+#endif
+
 #include <math.h>
 #include "F4DVector3.h"
 

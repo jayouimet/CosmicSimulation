@@ -105,6 +105,20 @@ namespace F4DEngine {
          z = z * oneOverMagnitude;
       }
    }
+
+   F4DVector3 F4DVector3::getNormalizedVector() 
+   {
+      float fX = 0, fY = 0, fZ = 0;
+      float magnitude = sqrt((x * x) + (y * y) + (z * z));
+      if (magnitude > 0.0f) {
+         float oneOverMagnitude = 1.0f / magnitude;
+         fX = x * oneOverMagnitude;
+         fY = y * oneOverMagnitude;
+         fZ = z * oneOverMagnitude;
+      }
+      return F4DVector3(fX, fY, fZ);
+   }
+
    F4DVector3 F4DVector3::rotateVectorAboutAngleAndAxis(float uAngle, F4DVector3& uAxis)
    {
       F4DQuaternion p(0, (*this));
